@@ -19,7 +19,7 @@ class Fiat extends Car {
  }
 
  public function stampa(){
-    echo "La mia macchina è colore $this->color con targa $this->targa e numero di ". Car::getnum_telaio();
+    echo "La mia macchina è colore $this->color con targa $this->targa e numero di ". $this->getnum_telaio();
  }
 }
 
