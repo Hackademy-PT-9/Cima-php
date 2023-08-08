@@ -16,3 +16,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('chisiamo', function () {
+    return view('chisiamo');
+});
+
+Route::get('storia', function () {
+    return view('storia');
+});
+
+Route::get('contatti', function () {
+    return view('contatti');
+});
+
+Route::get('int', function () {
+    return 3;
+});
+
+Route::get('string', function () {
+    return "Stringa";
+});
+
+Route::get('array', function () {
+    $array=["a","b"];
+    return $array[1];
+});
+
+
