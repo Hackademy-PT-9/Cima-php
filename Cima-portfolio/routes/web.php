@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/homepage', function() {
+    return view('homepage');
+})->name('homepage');
+
+
+Route::get('/chisiamo', function() {
+    return view('chisiamo');
+})->name('chisiamo');
+
+Route::get('/servizi', function() {
+    $services = ['Siti', 'eCommerce', 'Gestionali', 'Marketing'];
+    return view('servizi', $services);
+})->name('servizi');
+
+Route::get('/dettagliservizi{servizio}', function() {
+    return view('dettagliservizi');
+})->name('dettagliservizi');
+
