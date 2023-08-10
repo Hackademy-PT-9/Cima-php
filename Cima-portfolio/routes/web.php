@@ -24,10 +24,10 @@ Route::get('/chisiamo', function() {
 
 Route::get('/servizi', function() {
     $services = ['Siti', 'eCommerce', 'Gestionali', 'Marketing'];
-    return view('servizi', $services);
+    return view('servizi', ['services' => $services]);
 })->name('servizi');
 
-Route::get('/dettagliservizi{servizio}', function() {
-    return view('dettagliservizi');
+Route::get('/dettagliservizi{servizio}', function($stringa) {
+    return view('dettagliservizi', ['servizio' => $stringa]);
 })->name('dettagliservizi');
 
