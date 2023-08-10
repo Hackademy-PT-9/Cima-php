@@ -27,7 +27,12 @@ Route::get('/servizi', function() {
     return view('servizi', ['services' => $services]);
 })->name('servizi');
 
-Route::get('/dettagliservizi{servizio}', function($stringa) {
+Route::get('/dettagliservizi/{servizio}', function($stringa) {
     return view('dettagliservizi', ['servizio' => $stringa]);
 })->name('dettagliservizi');
+
+Route::get('/contatti', function() {
+    return view('contatti');
+})->name('contatti');
+
 
