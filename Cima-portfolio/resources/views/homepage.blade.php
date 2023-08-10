@@ -1,42 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  </head>
-  <body class="bg-primary">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body class="bg-primary">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand">{{env('APP_NAME')}}</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Homepage</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('chisiamo')}}">Chi siamo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('servizi')}}">Servizi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('contatti')}}">Contatti</a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand">{{ env('APP_NAME') }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('chisiamo') }}">Chi siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('servizi') }}">Servizi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('contatti') }}">Contatti</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-      <h1 class="text-center">Homepage</h1>
-    <div class="container-md">
-    <div class="row">
-      <div class="col-12">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum possimus tempore reprehenderit aperiam! Deleniti eum facere illo officia qui cumque placeat iure alias, labore ducimus. In dolorum accusamus aliquam facilis?</div>
+    </nav>
+    <h1 class="text-center">Homepage portfolio Cima</h1>
+    <div class="container-fluid justify-content-evenly d-flex">
+        <div class="row">
+            <div class="justify-content-evenly col-12 col-md-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum possimus tempore
+                reprehenderit aperiam! Deleniti eum facere illo officia qui cumque placeat iure alias, labore ducimus.
+                In dolorum accusamus aliquam facilis?
+            </div>
+            <div class="justify-content-evenly col-12 col-md-6">
+                <img src="https://images.adsttc.com/media/images/5b08/b87c/f197/ccb5/4900/00bd/medium_jpg/The_S_02_filter_edit2_06.jpg?1527298139"
+                    class="img-fluid" alt="imgHome">
+            </div>
+        </div>
     </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>
