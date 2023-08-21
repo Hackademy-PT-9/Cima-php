@@ -9,8 +9,8 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
-<body class="bg-primary">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body style="background-color:lightgoldenrodyellow">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand">{{ env('APP_NAME') }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,5 +54,4 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
 </body>
-
 </html>

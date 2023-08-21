@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,26 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/homepage', function() {
-    return view('homepage');
-})->name('homepage');
+Route::get('/homepage',[PublicController::class, 'homepage'])->name('homepage');
 
 
-Route::get('/chisiamo', function() {
-    return view('chisiamo');
-})->name('chisiamo');
+Route::get('/chisiamo',[PublicController::class, 'chisiamo'] )->name('chisiamo');
 
-Route::get('/servizi', function() {
-    $services = ['Siti', 'eCommerce', 'Gestionali', 'Marketing'];
-    return view('servizi', ['services' => $services]);
-})->name('servizi');
+Route::get('/contatti',[PublicController::class, 'contatti'] )->name('contatti');
 
-Route::get('/dettagliservizi/{servizio}', function($stringa) {
-    return view('dettagliservizi', ['servizio' => $stringa]);
-})->name('dettagliservizi');
+Route::get('/servizi',[CompanyController::class, 'servizi'] )->name('servizi');
 
-Route::get('/contatti', function() {
-    return view('contatti');
-})->name('contatti');
+Route::get('/dettagliservizi/{servizio}',[CompanyController::class, 'dettagliservizi'] )->name('dettagliservizi');
 
 

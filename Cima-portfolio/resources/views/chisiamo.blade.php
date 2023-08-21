@@ -6,8 +6,8 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
-  <body class="bg-primary">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <body style="background-color:lightgoldenrodyellow">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand">{{env('APP_NAME')}}</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
