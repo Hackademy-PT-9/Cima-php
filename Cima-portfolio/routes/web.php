@@ -17,10 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/homepage',[PublicController::class, 'homepage'])->name('homepage');
 
-
 Route::get('/chisiamo',[PublicController::class, 'chisiamo'] )->name('chisiamo');
 
 Route::get('/contatti',[PublicController::class, 'contatti'] )->name('contatti');
+
+
 
 Route::get('/servizi',[CompanyController::class, 'servizi'] )->name('servizi');
 
