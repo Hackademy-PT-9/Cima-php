@@ -1,0 +1,1 @@
+Email test inviata da {{$content['email']}}

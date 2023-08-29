@@ -27,4 +27,4 @@ Route::get('/servizi',[CompanyController::class, 'servizi'] )->name('servizi');
 
 Route::get('/dettagliservizi/{servizio}',[CompanyController::class, 'dettagliservizi'] )->name('dettagliservizi');
 
-
+Route::post('/contatti',[CompanyController::class,'send'])->name('mail');

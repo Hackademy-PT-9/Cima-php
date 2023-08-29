@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\InfoMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use PHPUnit\Event\Telemetry\Info;
 
 class CompanyController extends Controller
 {
 
-    
+
 public static $services = [
     [
         'uri' => 'gestionali',
@@ -75,7 +78,7 @@ public static $services = [
     public function servizi() {
         return view('servizi', ['services' => self::$services]);
     }
-    
+
         public function dettagliservizi($stringa) {
 
             foreach (self::$services as $service)
@@ -87,6 +90,25 @@ public static $services = [
                 }
             }
             abort(404);
-            
+
+    }
+
+    public function send(Request $request){
+        $request->validate([
+            'nome'=>'required',
+            'email'=>'required|email',
+            'msg' => 'required|min:10'
+        ]);
+
+        $data=[
+            'nome'=>$request->input('nome'),
+            'email'=>$request->input('email'),
+            'msg' => $request->input('msg')
+        ];
+
+        Mail::to($data['email'])
+        ->send(new InfoMail($data));
+
+        return view('contatti');
     }
 }
