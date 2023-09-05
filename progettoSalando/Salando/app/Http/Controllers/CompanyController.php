@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
-    public static 
+    protected static 
     $data = [ 
         [
             "id" => 1,
@@ -71,6 +71,11 @@ class CompanyController extends Controller
     ];
     public function dettagli($valore)
     {
-        return view('prodotto', compact($valore));
+        return view('prodotto', compact('valore'));
+    }
+
+    public function homepage()
+    {
+            return view('welcome', ['data'=> self::$data]);
     }
 }
